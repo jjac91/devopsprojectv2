@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devopsprojectv2-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: devopsprojectv2
+  template:
+    metadata:
+      labels:
+        app: devopsprojectv2
+    spec:
+      containers:
+      - name: devopsprojectv2
+        image: dennisa91/devopsprojectv2:latest
+        ports:
+        - containerPort: 3000
