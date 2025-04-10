@@ -19,7 +19,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                   def dockerImage = docker.build("${DOCKER_HUB_REPO}:${IMAGE_TAG}")
+                   dockerImage = docker.build("${DOCKER_HUB_REPO}:${IMAGE_TAG}")
                 }
             }
         }
